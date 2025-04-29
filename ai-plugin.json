@@ -10,10 +10,10 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://your-username.github.io/vector-store-uploader/openapi.yaml",
+    "url": "https://mbarnett2011.github.io/vector-store-uploader/openapi.yaml",
     "has_user_authentication": false
   },
-  "logo_url": "https://your-username.github.io/vector-store-uploader/logo.png",
-  "contact_email": "support@example.com",
-  "legal_info_url": "https://example.com/legal"
+  "logo_url": "https://mbarnett2011.github.io/vector-store-uploader/logo.png",
+  "contact_email": "michael.j.barnett1@gmail.com",
+  "legal_info_url": "https://github.com/mbarnett2011/vector-store-uploader#readme"
 }
