@@ -1,0 +1,48 @@
+openapi: 3.1.0
+info:
+  title: Upload Files to Vector Store
+  description: Uploads a file from Google Drive (or local) into the specified vector store on OpenAI.
+  version: 1.0.0
+servers:
+  - url: https://api.openai.com/v1
+paths:
+  /vector_stores/vs_680510c74d308191896c7fec9cb57c6f/files:
+    post:
+      operationId: uploadFileToVectorStore
+      summary: Upload a file to the specified vector store.
+      description: Uploads a file into vector store `vs_680510c74d308191896c7fec9cb57c6f`.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: The file to upload.
+      responses:
+        '200':
+          description: Successful upload.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID of the uploaded file.
+                  object:
+                    type: string
+                  created_at:
+                    type: integer
+                    description: Timestamp when uploaded.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: APIKey
